@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="se">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<script src="https://kit.fontawesome.com/acc737eb0c.js" crossorigin="anonymous"></script>
+	<link href="./assets/css/main-stylish.css" rel="stylesheet">
+	<link href="./assets/css/navbar-stylish.css" rel="stylesheet">
+	<link href="./assets/css/footer-stylish.css" rel="stylesheet">
+	<link href="./assets/css/kontakt-stylish.css" rel="stylesheet">
+	<title>Kontakta mig</title>
+</head>
+
+<body>
+
+	<!-- ===========Logo + menyn====================-->
+
+	<header class="header">
+		<div class="logo">
+			<a href="index.html"><img src="./assets/img/lakky4.png" alt="logo"></a>
+		</div>
+		<div class="navbar">
+			<div class="hamburgerish" onclick="Show()">
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+			<ul id="navi-lista">
+				<li class="close"><span onclick="Hide()">×</span></li>
+				<li><a href="index.html">HEM</a></li>
+				<li><a href="kontakt.html">KONTAKT</a></li>
+
+			</ul>
+
+		</div>
+		<script src="hamburgerish.js"></script> <!--Hamburgerbar på menyn om villkoret för mediaquery är uppfyllt-->
+	</header>
+
+	<!-- ===========Bygg formulär och skicka formulärdata till FormDataProcessish,php ====================-->
+
+	<div id="contact-heading">
+		<h1>Kontaktformulär</h1>
+	</div>
+	<div id="contact-text">
+		<p>Skicka en hälsning till mig om du vill.</p>
+	</div>
+	<form method=" post " enctype="multipart/form-data" action="FormDataProcessish.php">
+		<input type="text" name="name" class="input" placeholder="Namn">
+		<input type="text" name="email" class="input" placeholder="Email">
+		<textarea name="message" class="input" placeholder="Meddelande"></textarea>
+		<input type="submit" value="SKICKA" />
+	</form>
+
+	<!-- ===========Footer med adressuppgifter samt sociala iconer====================-->
+
+
+	<footer>
+		<div id="contactme">
+			<p>
+				<i class="fas fa-map-marker-alt"></i>&nbsp;Kyrkängsvägen 146 i Lindome
+			</p>
+			<p>
+				<i class="fas fa-phone"></i>&nbsp;0737-219100
+			</p>
+			<ul>
+				<li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+				</li>
+				<li><a href="https://pinterest.com"><i class="fa fa-pinterest-p"></i></a></li>
+				<li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+			</ul>
+		</div>
+		<div id="copyRight">
+			<p>&copy; Lakky</p>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

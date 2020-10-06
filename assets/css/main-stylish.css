@@ -1,0 +1,201 @@
+ * {
+ 	box-sizing: border-box;
+ }
+
+ body {
+ 	font-family: 'Montserrat', sans-serif;
+ 	line-height: 1.8;
+ 	margin: 0;
+ 	/* min-height: 100vh; */
+ }
+
+ h2, h3, a {
+ 	color: #34495e;
+ }
+
+ 
+
+ div.txt_minmax_container {
+ 	min-height: 50px;
+ }
+
+ div.txt_minmax_container textarea {
+ 	position: relative;
+ 	border: 0;
+ 	min-height: 30px;
+ 	width: 400px;
+ 	transition: all 200ms;
+ }
+
+ div.txt_minmax_container textarea:focus {
+ 	z-index: 1001;
+ 	min-height: 250px;
+ }
+
+ #section01 {
+ 	margin: 0;
+ 	padding: .5rem .5rem;
+ }
+
+ #section02 {
+ 	margin: 0;
+ 	padding: 1rem 1rem;
+ }
+
+ #section03 {
+ 	margin: 0;
+ 	padding: 1rem 1rem;
+ }
+
+ #section04 {
+ 	margin: 0;
+ 	padding: 1rem 1rem;
+ }
+
+ #section05 {
+ 	margin: 0;
+ 	padding: 1rem 1rem;
+ }
+
+ #section06 {
+ 	margin: 0;
+ 	padding: 1rem 1rem;
+ }
+
+ .sectionParagraph {
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	overflow: hidden;
+ 	/* text-align: justify; */
+ 	font-size: .85em;
+ 	text-align: left;
+ 	margin-top: -30px;
+ }
+
+ .sectionHeading_main {
+ 	margin: auto;
+ 	text-align: left;
+ 	font-size: .99em;
+ 	padding: 25px 5px 5px 5px;
+ }
+
+ .sectionParagraph-main-right {
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	overflow: hidden;
+ 	text-align: left;
+ 	font-size: .85em;
+ }
+
+ .sectionParagraph-main-left {
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	overflow: hidden;
+ 	text-align: left;
+ 	font-size: .85em;
+ }
+
+ .sectionParagraph_small {
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	overflow: hidden;
+ 	text-align: left;
+ 	font-size: .75em;
+ }
+
+ .progress-line {
+ 	display: block;
+ 	height: 3px;
+ 	background: #bda667;
+ 	position: relative;
+ 	z-index: 3;
+ }
+
+ .progress-line_small {
+ 	display: block;
+ 	height: 1px;
+ 	background: #bda667;
+ 	position: relative;
+ 	z-index: 3;
+ }
+
+ .img-scale {
+ 	transition: transform .2s;
+ }
+
+ .img-scale:hover {
+ 	transform: scale(1.1);
+ 	/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+ }
+
+ /* ================================= 
+  Media Queries
+==================================== */
+
+ @media only screen and (min-width: 980px) {
+ 	#section01 {
+ 		grid-area: section01;
+ 		text-align: center;
+ 	}
+ 	#section02 {
+ 		grid-area: section02;
+ 		text-align: center;
+ 		padding: 10px 10px 10px 10px;
+ 		word-wrap: break-word;
+ 	}
+ 	#section03 {
+ 		grid-area: section03;
+ 		text-align: center;
+ 		padding: 10px 10px 10px 10px;
+ 		word-wrap: break-word;
+ 	}
+ 	#section04 {
+ 		grid-area: section04;
+ 		text-align: center;
+ 		padding: 10px 10px 10px 10px;
+ 		word-wrap: break-word;
+ 	}
+ 	#section05 {
+ 		grid-area: section05;
+ 		text-align: center;
+ 		padding: 10px 10px 10px 10px;
+ 		word-wrap: break-word;
+ 	}
+ 	#section06 {
+ 		grid-area: section06;
+ 		text-align: center;
+ 		padding: 10px 10px 10px 10px;
+ 		word-wrap: break-word;
+ 	}
+ 	.sectionParagraph {
+ 		max-width: 80vw;
+ 		padding-left: 30px;
+ 	}
+ 	.sectionParagraph-main-right {
+ 		padding-left: 30px;
+ 		padding-right: 80px;
+ 	}
+ 	.sectionParagraph-main-left {
+ 		padding-left: 30px;
+ 		padding-right: 30px;
+ 	}
+ 	.border-right {
+ 		border-right: 1px solid black;
+ 	}
+ 	.sectionHeading_main {
+ 		padding: 20px 0px 0px 30px;
+ 	}
+ 	.img-container {
+ 		padding-left: 30px;
+ 		padding-top: 3px;
+ 	}
+ 	main {
+ 		align-content: space-around;
+ 		display: grid;
+ 		grid-template-areas: "section01 section01 section01" "section02 section03 section03" "section04 section05 section06";
+ 		/* grid-template-areas: "section01 section01 section01" "section02 section03 section04" "section05 section06 section07"; */
+ 		grid-template-columns: 1fr 1fr 1fr;
+ 		grid-template-rows: 1fr 0.6fr 1fr;
+ 		justify-content: space-around;
+ 	}
+ }

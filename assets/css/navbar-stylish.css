@@ -1,0 +1,135 @@
+.header {
+	height: 80px;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	overflow: hidden;
+}
+
+.header .logo {
+	max-width: auto;
+	padding: 0 10px;
+	overflow: hidden;
+}
+
+.header .logo a {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 60px;
+}
+
+.header .logo a img {
+	max-width: 100%;
+	max-height: 80px;
+}
+
+.header .navbar {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+	padding: 0 10px;
+}
+
+.header .navbar ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header .navbar ul li a {
+	text-decoration: none;
+	color: #575555;
+	font-size: 14px;
+	text-transform: uppercase;
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	cursor: pointer;
+	padding: 0 10px;
+}
+
+.header .navbar ul li a:hover {
+	color: #ffffff;
+	background-color: #666666;
+}
+
+.header .navbar ul .close {
+	display: none;
+	text-align: right;
+	padding: 10px;
+}
+
+.header .navbar ul .close span {
+	font-size: 40px;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.header .navbar .hamburgerish {
+	padding: 18px 8px;
+	width: 50px;
+	height: 60px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.header .navbar .hamburgerish i {
+	background-color: #000000;
+	height: 2px;
+}
+
+@media only screen and (max-width: 650px) {
+	.header {
+		justify-content: space-between;
+	}
+	.header .logo {
+		flex: 1;
+	}
+	.header .navbar {
+		flex: 0;
+	}
+	.header .logo a img {
+		max-width: auto;
+		max-height: 100%;
+	}
+	.header .navbar ul {
+		flex-wrap: nowrap;
+		position: fixed;
+		left: 100%;
+		flex-direction: column;
+		background: #ffffff;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: left .3s;
+	}
+	.header .navbar ul li a {
+		padding: 10px;
+		font-size: 16px;
+		height: auto;
+		line-height: normal;
+		color: #0c0c0c;
+	}
+	.header .navbar ul .close {
+		display: block;
+	}
+	.header .navbar .hamburgerish {
+		display: flex;
+	}
+	.header .navbar ._Menus-show {
+		left: 0;
+	}
+}
